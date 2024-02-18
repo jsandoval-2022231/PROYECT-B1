@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const { dbConnection } = require('../db/config');
-const exp = require('constants');
 
 class Server {
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
+        this.productPath = '/api/products';
 
         this.connectDB();
         this.middlewares();
+        this.routes();
     }
 
     middlewares(){
@@ -20,6 +21,10 @@ class Server {
 
     async connectDB(){
         await dbConnection();
+    }
+
+    routes(){
+        this.app.use(this.productPath, require('../routes/product.routes'));
     }
 
     listen(){
