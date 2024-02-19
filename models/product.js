@@ -16,8 +16,7 @@ const ProductSchema = Schema({
     category: {
         type: String,
         default: 'OTHERS',
-        enum: ['FOOD', 'DRINKS', 'OTHERS'],
-        required: true
+        enum: ['FOOD', 'DRINKS', 'OTHERS']
     },
     stock: {
         type: Number,

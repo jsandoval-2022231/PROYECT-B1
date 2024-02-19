@@ -1,5 +1,4 @@
 const { response, json } = require('express');
-const bcryptjs = require('bcryptjs');
 const Product = require('../models/product');
 
 
@@ -19,6 +18,20 @@ const getProducts = async (req, res = response) => {
     });
 }
 
+const postProduct = async (req, res ) => {
+    const { name, price, category, description, available } = req.body;
+    const product = new Product({ name, price, category, description, available });
+    
+    
+    await product.save();
+    res.status(201).json({
+        product
+    });
+
+
+}
+
 module.exports = {
-    getProducts
+    getProducts,
+    postProduct
 }
