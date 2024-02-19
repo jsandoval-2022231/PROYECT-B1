@@ -2,6 +2,19 @@ const { response, json } = require('express');
 const Product = require('../models/product');
 
 
+const putProduct = async (req, res ) => {
+    const { id } = req.params;
+    const { _id, name } = req.body;
+    await Product.findByIdAndUpdate(id, name);
+
+    const product = await Product.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Product updated',
+        product
+    });
+}
+
 const getProducts = async (req, res = response) => {
     const { limit, from} = req.query;
     const query = { state: true };
@@ -15,6 +28,27 @@ const getProducts = async (req, res = response) => {
     res.status(200).json({
         total,
         products
+    });
+}
+
+const getProductById = async (req, res ) => {
+    const { id } = req.params;
+    const product = await Product.findOne({_id: id});
+    
+    res.status(200).json({
+        product
+    });
+}
+
+const deleteProduct = async (req, res ) => {
+    const { id } = req.params;
+    await Product.findByIdAndUpdate(id, { state: false });
+
+    const product = await Product.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Product deleted',
+        product
     });
 }
 
@@ -33,5 +67,8 @@ const postProduct = async (req, res ) => {
 
 module.exports = {
     getProducts,
-    postProduct
+    postProduct, 
+    deleteProduct,
+    getProductById,
+    putProduct
 }
