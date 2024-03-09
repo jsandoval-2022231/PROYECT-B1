@@ -16,11 +16,10 @@ const UserSchema = mongoose.Schema({
     },
     role: {
       type: String,
-      required: true,
       default: "CLIENT_ROLE",
       enum: ["ADMIN_ROLE", "CLIENT_ROLE"],
     },
-    state: {
+    status: {
       type: Boolean,
       default: true,
     }

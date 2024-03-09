@@ -12,11 +12,10 @@ export const isValidRol = async (role = '') => {
 export const existsEmail = async (email = '') => {
     const existsE = await User.findOne({ email });
 
-    if (existeEmail) {
+    if (existsE) {
         throw new Error(`The email ${email} was registred`);
     }
 }
-
 
 export const existsUserById = async (id = '') => {
     const existsUser = await User.findById(id);
