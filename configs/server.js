@@ -8,7 +8,7 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import categoryRoutes from '../src/category/category.routes.js';
-//import productRoutes from '../src/product/product.routes.js';
+import productRoutes from '../src/product/product.routes.js';
 
 
 class Server {
@@ -41,7 +41,7 @@ class Server {
         this.app.use(this.userPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoryPath, categoryRoutes);
-        //this.app.use(this.productPath, productRoutes);
+        this.app.use(this.productPath, productRoutes);
     }
 
 
