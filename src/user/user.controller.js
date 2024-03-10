@@ -45,13 +45,38 @@ export const updateUser = async (req, res = response) => {
     res.status(200).json({ msg: 'User Updated', user });
 }
 
+export const updateOwnUser = async (req, res = response) => {
+    const authenticatedUser = req.user;
+    const { _id, email, password, role, status, ...rest } = req.body;
+
+    if (password) {
+        const salt = bcryptjs.genSaltSync();
+        rest.password = bcryptjs.hashSync(password, salt);
+    }
+
+    await User.findByIdAndUpdate(authenticatedUser._id, rest);
+
+    const user = await User.findOne({ _id: authenticatedUser._id });
+
+    res.status(200).json({ msg: 'User Updated', user });
+}
+
 export const deleteUser = async (req, res) => {
     const { id } = req.params;
-    res.header('x-token', req.user.accessToken);
+    console.log("req.user.accessToken: ", req.user.accessToken);
     const user = await User.findByIdAndUpdate(id, { status: false });
     const authenticatedUser = req.user;
 
     res.status(200).json({ msg: 'User Deleted', user, authenticatedUser });
+}
+
+export const deleteOwnUser = async (req, res) => {
+    const authenticatedUser = req.user;
+    await User.findByIdAndUpdate(authenticatedUser._id, { status: false });
+    
+    const user = await User.findOne({ _id: authenticatedUser._id });
+
+    res.status(200).json({ msg: 'User Deleted', user });
 }
 
 export const getUserById = async (req, res) => {

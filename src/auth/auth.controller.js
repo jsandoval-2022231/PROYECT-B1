@@ -1,7 +1,6 @@
 import bcryptjs from 'bcryptjs';
 import User from '../user/user.model.js'
 import { genJWT } from '../helpers/generate-jwt.js';
-import { set } from 'mongoose';
 
 export const login = async (req, res) => {
     const { email, password } = req.body;
@@ -30,9 +29,9 @@ export const login = async (req, res) => {
 
         const token = await genJWT(user.id);
 
-        setToken(token);
         user.accessToken = token;
         await user.save();
+
         res.status(200).json({
             msg: 'Login successfully!',
             user,
@@ -45,8 +44,4 @@ export const login = async (req, res) => {
             msg: "Error trying to loggin",
         });
     }
-}
-
-export function setToken(token) {
-    return token; 
 }
