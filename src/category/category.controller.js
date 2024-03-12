@@ -1,5 +1,6 @@
 import { response, request } from "express";
 import Category from './category.model.js';
+import Product from '../product/product.model.js';
 
 export const getCategory = async (req = request, res = response) => {
     const { limit, from } = req.query;
@@ -14,6 +15,18 @@ export const getCategory = async (req = request, res = response) => {
 
     res.status(200).json({ total, categories });
 }
+
+export const deleteCategoryAndProductAssociated = async (req, res) => {
+    const { id } = req.params;
+    const categoryToUpdate = await Category.findOne({ _id: id });
+    const products = await Product.findOne({ category: categoryToUpdate });
+    await Category.findByIdAndUpdate(id, { status: false });
+
+    const category = await Category.findOne({ _id: id });
+
+    res.status(200).json({ msg: 'Category Deleted', category });
+}
+
 
 export const getCategoryById = async (req, res) => {
     const { id } = req.params;
@@ -41,13 +54,16 @@ export const updateCategory = async (req, res = response) => {
     res.status(200).json({ msg: 'Category Updated', category });
 }
 
-export const deleteCategory = async (req, res) => {
-    const { id } = req.params;
-    await Category.findByIdAndUpdate(id, { status: false });
 
-    const category = await Category.findOne({ _id: id });
 
-    const authenticatedUser = req.user;
 
-    res.status(200).json({ msg: 'Category Deleted', category, authenticatedUser });
-}
+// export const deleteCategory = async (req, res) => {
+//     const { id } = req.params;
+//     await Category.findByIdAndUpdate(id, { status: false });
+
+//     const category = await Category.findOne({ _id: id });
+
+//     const authenticatedUser = req.user;
+
+//     res.status(200).json({ msg: 'Category Deleted', category, authenticatedUser });
+// }

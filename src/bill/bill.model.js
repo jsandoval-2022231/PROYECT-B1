@@ -6,14 +6,10 @@ const billSchema = mongoose.Schema({
         ref: "User",
         required: [true, "Customer is required"],
     },
-    products: [{
+    cart: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Product",
-        required: [true, "Product is required"],
-    }],
-    total: {
-        type: Number,
-        required: [true, "Total is required"],
+        ref: "Cart",
+        required: [true, "Cart is required"],
     },
     status: {
         type: String,

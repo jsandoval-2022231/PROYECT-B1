@@ -10,6 +10,7 @@ import authRoutes from '../src/auth/auth.routes.js';
 import categoryRoutes from '../src/category/category.routes.js';
 import productRoutes from '../src/product/product.routes.js';
 import billRoutes from '../src/bill/bill.routes.js';
+import cartRoutes from '../src/cart/cart.routes.js';
 
 
 class Server {
@@ -21,6 +22,7 @@ class Server {
         this.categoryPath = '/kinalShop/v1/categories';
         this.productPath = '/kinalShop/v1/products';
         this.billPath = '/kinalShop/v1/bills';
+        this.cartPath = '/kinalShop/v1/carts';
 
         this.middlewares();
         this.connectDB();
@@ -45,6 +47,7 @@ class Server {
         this.app.use(this.categoryPath, categoryRoutes);
         this.app.use(this.productPath, productRoutes);
         this.app.use(this.billPath, billRoutes);
+        this.app.use(this.cartPath, cartRoutes);
     }
 
 

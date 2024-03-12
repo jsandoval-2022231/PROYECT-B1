@@ -2,9 +2,7 @@ import { response, request } from "express";
 import Product from './product.model.js';
 
 export const getProducts = async (req = request, res = response) => {
-    const { limit, from } = req.query;
     const query = { status: ['AVAILABLE', 'NOT_AVAILABLE', 'RESERVED', 'SOLD_OUT', 'AWAITING_PAYMENT'] };
-
     const [total, products] = await Promise.all([
         Product.countDocuments(query),
         Product.find(query)
@@ -13,14 +11,6 @@ export const getProducts = async (req = request, res = response) => {
     ]);
 
     res.status(200).json({ total, products });
-}
-
-export const productSeller = async (req, res) => {
-    const { id } = req.params;
-    const product = await Product.findOne({ _id: id }).populate('seller', 'name');
-
-    res.status(200).json({ product });  
-
 }
 
 export const getProductByName = async (req, res) => {

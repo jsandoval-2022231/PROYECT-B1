@@ -16,11 +16,15 @@ router.get('/', getProducts);
 router.get('/:id', getProductById);
 
 router.post('/', [
+    validateJWT,
+    hasRole('ADMIN_ROLE'),
     check('name', 'Name is required').not().isEmpty(),
     validInputs
 ], createProduct);
 
 router.put('/:id', [
+    validateJWT,
+    hasRole('ADMIN_ROLE'),
     check('id', 'Id required').not().isEmpty(),
     check('id', 'Id invalid').isMongoId(),
     validInputs
