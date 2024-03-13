@@ -20,6 +20,9 @@ export const deleteCategoryAndProductAssociated = async (req, res) => {
     const { id } = req.params;
     const categoryToUpdate = await Category.findOne({ _id: id });
     const products = await Product.findOne({ category: categoryToUpdate });
+
+
+    
     await Category.findByIdAndUpdate(id, { status: false });
 
     const category = await Category.findOne({ _id: id });
