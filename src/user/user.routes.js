@@ -9,7 +9,7 @@ import {
   deleteOwnUser,
   updateOwnUser
 } from "./user.controller.js";
-import { existsEmail, existsUserById, isValidRol } from "../helpers/db-validators.js";
+import { existsEmail, existsUserById, isValidRol, confirmation } from "../helpers/db-validators.js";
 import { validInputs } from "../middlewares/valid-inputs.js";
 import { validateJWT} from "../middlewares/valid-jwt.js";
 import { hasRole } from "../middlewares/valid-roles.js";
@@ -101,6 +101,8 @@ router.delete(
     '/',
     [
         validateJWT,
+        check('response', 'Response required').not().isEmpty(),
+        check('response').custom(confirmation),
         validInputs,
     ],
     deleteOwnUser

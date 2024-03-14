@@ -18,9 +18,11 @@ const cartSchema = mongoose.Schema({
         ref: "User",
         required: [true, "Customer is required test"],
     },
-    products: [cartItemSchema]
+    products: [cartItemSchema], 
+    total: {
+        type: Number,
+        default: 0.00,
+    },
 });
-
-
 
 export default mongoose.model("Cart", cartSchema);

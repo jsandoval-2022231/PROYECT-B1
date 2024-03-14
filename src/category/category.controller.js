@@ -16,20 +16,24 @@ export const getCategory = async (req = request, res = response) => {
     res.status(200).json({ total, categories });
 }
 
-export const deleteCategoryAndProductAssociated = async (req, res) => {
+export const deleteCategoryAndProduct = async (req, res) => {
     const { id } = req.params;
-    const categoryToUpdate = await Category.findOne({ _id: id });
-    const products = await Product.findOne({ category: categoryToUpdate });
 
-
-    
     await Category.findByIdAndUpdate(id, { status: false });
+
+    const products = await Product.find({ category: id });
+
+    const categoryId = await Category.findOne({ _id: "65f296500b6e56e699e607b1" });
+
+    for (const product of products) {
+        await Product.findByIdAndUpdate(product._id, { category: categoryId });
+    }
 
     const category = await Category.findOne({ _id: id });
 
-    res.status(200).json({ msg: 'Category Deleted', category });
-}
+    res.status(200).json({ msg: 'Category deleted', category });
 
+}
 
 export const getCategoryById = async (req, res) => {
     const { id } = req.params;
@@ -60,13 +64,13 @@ export const updateCategory = async (req, res = response) => {
 
 
 
-// export const deleteCategory = async (req, res) => {
-//     const { id } = req.params;
-//     await Category.findByIdAndUpdate(id, { status: false });
+export const deleteCategory = async (req, res) => {
+    const { id } = req.params;
+    await Category.findByIdAndUpdate(id, { status: false });
 
-//     const category = await Category.findOne({ _id: id });
+    const category = await Category.findOne({ _id: id });
 
-//     const authenticatedUser = req.user;
+    const authenticatedUser = req.user;
 
-//     res.status(200).json({ msg: 'Category Deleted', category, authenticatedUser });
-// }
+    res.status(200).json({ msg: 'Category Deleted', category, authenticatedUser });
+}

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createCart, getCart } from "./cart.controller.js";
+import { createCart, getCart, updateCart } from "./cart.controller.js";
 
 import { existsUserById, isValidRol } from "../helpers/db-validators.js";
 import { validInputs } from "../middlewares/valid-inputs.js";
@@ -20,5 +20,9 @@ router.post('/',
     ], 
     createCart);
 
+router.put('/', [
+    validateJWT,
+    validInputs
+], updateCart);
 
 export default router;

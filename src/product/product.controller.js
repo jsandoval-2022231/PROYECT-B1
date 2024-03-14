@@ -6,8 +6,6 @@ export const getProducts = async (req = request, res = response) => {
     const [total, products] = await Promise.all([
         Product.countDocuments(query),
         Product.find(query)
-            .skip(Number(from))
-            .limit(Number(limit))
     ]);
 
     res.status(200).json({ total, products });

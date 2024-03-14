@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getCategory, getCategoryById, createCategory, updateCategory, deleteCategory } from "./category.controller.js";
+import { getCategory, getCategoryById, createCategory, updateCategory, deleteCategoryAndProduct } from "./category.controller.js";
 
 import { existsUserById, isValidRol } from "../helpers/db-validators.js";
 import { validInputs } from "../middlewares/valid-inputs.js";
@@ -37,7 +37,7 @@ router.delete('/:id', [
         check('id', 'Id required').not().isEmpty(),
         check('id', 'Id invalid').isMongoId(),
         validInputs
-    ], deleteCategory);
+    ], deleteCategoryAndProduct);
 
 
 export default router;

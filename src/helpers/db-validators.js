@@ -31,3 +31,15 @@ export const isOwner = async (id = '', user = {}) => {
     }
 }
 
+export const confirmation = async (response) => {
+    
+    if (response.toLowerCase() == 'no') {
+        throw new Error(`User not deleted`);
+    }
+}
+
+export const isValidStock = async(stock) => {
+    if(stock <= 0){
+        throw new Error('Stock is not valid');
+    }
+}

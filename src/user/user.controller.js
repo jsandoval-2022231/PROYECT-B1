@@ -72,11 +72,18 @@ export const deleteUser = async (req, res) => {
 
 export const deleteOwnUser = async (req, res) => {
     const authenticatedUser = req.user;
-    await User.findByIdAndUpdate(authenticatedUser._id, { status: false });
-    
-    const user = await User.findOne({ _id: authenticatedUser._id });
+    const { userResponse } = req.body;
 
-    res.status(200).json({ msg: 'User Deleted', user });
+    if(userResponse == 'NO'){
+        return res.status(400).json({ msg: 'User not deleted' });
+    }else {
+        await User.findByIdAndUpdate(authenticatedUser._id, { status: false });
+    
+        const user = await User.findOne({ _id: authenticatedUser._id });
+    
+        res.status(200).json({ msg: 'User Deleted Successfully', user });
+    }
+   
 }
 
 export const getUserById = async (req, res) => {
