@@ -1,0 +1,78 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CART KS",
+    "dateExported": "2024-03-14T08:25:13.932Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "868f0918-5d77-428c-8542-bcc9a9a62593",
+            "colId": "5bb52bd2-4f99-4e83-91e0-695543ebb0fe",
+            "containerId": "",
+            "name": "ADD TO CART",
+            "url": "http://localhost:8080/kinalShop/v1/carts",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-12T04:24:55.377Z",
+            "modified": "2024-03-14T08:15:53.368Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkZmE4ZDE0OWJlODQwMjFmM2JkOTkiLCJpYXQiOjE3MTA0MDQxMTksImV4cCI6MTcxMDQwNzcxOX0.klglfAtrpkhqr0aB8OxYd3wYzfKlRY_czhkaCHUhgtM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"products\": [\n    {\n      \"product\": \"65ed0e71bb1f2cfd2caf8ce3\",\n      \"quantity\": 5\n    },\n    {\n      \"product\": \"65ed0feb00226bf0a5519649\",\n      \"quantity\": 13\n    }\n  ]\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "0a439805-1bf8-424a-897e-54556750783a",
+            "colId": "5bb52bd2-4f99-4e83-91e0-695543ebb0fe",
+            "containerId": "",
+            "name": "getCart",
+            "url": "http://localhost:8080/kinalShop/v1/carts",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-12T16:52:32.943Z",
+            "modified": "2024-03-14T08:17:07.715Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkZmE4ZDE0OWJlODQwMjFmM2JkOTkiLCJpYXQiOjE3MTA0MDQxMTksImV4cCI6MTcxMDQwNzcxOX0.klglfAtrpkhqr0aB8OxYd3wYzfKlRY_czhkaCHUhgtM"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "f71b567e-edda-43f1-a4ab-18cea4b30a39",
+            "colId": "5bb52bd2-4f99-4e83-91e0-695543ebb0fe",
+            "containerId": "",
+            "name": "Update Car",
+            "url": "http://localhost:8080/kinalShop/v1/carts",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-14T01:27:53.184Z",
+            "modified": "2024-03-14T07:47:13.086Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmZjY2QxNGI2OGEyODgwNmRkNDUiLCJpYXQiOjE3MTA0MDExMDMsImV4cCI6MTcxMDQwNDcwM30.BSEs6hBeNoV-Gmmk7ecfajTk0lWujJDH8Dn0YBRg5YQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"products\": [\n    {\n      \"product\": \"65ed0e71bb1f2cfd2caf8ce3\",\n      \"quantity\": 3\n    },\n    {\n      \"product\": \"65ed0fb7fa1245c5870a800a\",\n      \"quantity\": 3\n    }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "LOGIN KS",
+    "dateExported": "2024-03-14T08:26:46.201Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0e58f640-0f23-456d-9721-b0ff3cc4a01a",
+            "colId": "7059daac-6489-4686-b502-06fb6a3a8c4c",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:8080/kinalShop/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-09T05:28:20.980Z",
+            "modified": "2024-03-14T08:15:19.363Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test4@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        }
+    ]
+}

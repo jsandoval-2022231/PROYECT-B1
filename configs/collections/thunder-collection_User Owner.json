@@ -1,0 +1,71 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "User Owner",
+    "dateExported": "2024-03-14T08:25:55.512Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2f12dc37-febb-47c3-8ad1-0459c0fc39ee",
+            "colId": "d3a6eada-66fb-45dd-aa40-c08810dd0226",
+            "containerId": "",
+            "name": "DeleteOwnUser",
+            "url": "http://localhost:8080/kinalShop/v1/users",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2024-03-10T18:13:58.654Z",
+            "modified": "2024-03-10T18:18:48.227Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmZjY2QxNGI2OGEyODgwNmRkNDUiLCJpYXQiOjE3MTAwOTQ3MjEsImV4cCI6MTcxMDA5ODMyMX0.jpVerxMl7bgo_un5Q8a2CJWjK5zWFRS78lXWHzBSHmQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "521578b5-1141-46dd-b4c7-09dd5a4f05c4",
+            "colId": "d3a6eada-66fb-45dd-aa40-c08810dd0226",
+            "containerId": "",
+            "name": "Create User",
+            "url": "http://localhost:8080/kinalShop/v1/users/owner",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-10T18:24:36.932Z",
+            "modified": "2024-03-10T18:37:56.185Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test4\",\n  \"email\": \"test4@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "24d93b43-6d09-41c9-89c6-86a3256fe2fa",
+            "colId": "d3a6eada-66fb-45dd-aa40-c08810dd0226",
+            "containerId": "",
+            "name": "Update Own User",
+            "url": "http://localhost:8080/kinalShop/v1/users",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-10T18:41:30.421Z",
+            "modified": "2024-03-10T18:47:38.838Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmZjY2QxNGI2OGEyODgwNmRkNDUiLCJpYXQiOjE3MTAwOTY0MzgsImV4cCI6MTcxMDEwMDAzOH0.jcmm__AnEADbMskG0opCITE0F_-WzfAX9b1AEjdLDXA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test1\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

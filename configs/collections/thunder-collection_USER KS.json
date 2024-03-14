@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "USER KS",
+    "dateExported": "2024-03-14T08:26:39.908Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e495f85e-da43-465b-978e-bb080c712e96",
+            "colId": "a87ae599-c81a-41e7-8de0-0ea747179773",
+            "containerId": "",
+            "name": "Get Users",
+            "url": "http://localhost:8080/kinalShop/v1/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-09T06:17:20.067Z",
+            "modified": "2024-03-14T00:10:31.331Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVjOTNmMjRhMjMyNzRjNWQ1ZTQ5ODIiLCJpYXQiOjE3MTAzNzQ5NjksImV4cCI6MTcxMDM3ODU2OX0.Fx-BIrF9QUivjAfsvPwfgzeZdN48UeBIID_Ihregaeo"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "31de633e-9399-4223-a77e-f04996bc2b13",
+            "colId": "a87ae599-c81a-41e7-8de0-0ea747179773",
+            "containerId": "",
+            "name": "Create User",
+            "url": "http://localhost:8080/kinalShop/v1/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-09T06:18:27.911Z",
+            "modified": "2024-03-10T18:32:41.342Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test4\",\n  \"email\": \"test4@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "9578a8d4-7968-4ce2-a88d-1180d54ec046",
+            "colId": "a87ae599-c81a-41e7-8de0-0ea747179773",
+            "containerId": "",
+            "name": "Update User",
+            "url": "http://localhost:8080/kinalShop/v1/users/65ebff6bd14b68a28806dd3f",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-09T06:31:55.977Z",
+            "modified": "2024-03-10T19:11:02.555Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test1Changed\",\n  \"password\": \"123456789\",\n  \"status\": true,\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "aa2201ca-f675-4ae7-b59b-4ed527d4edfb",
+            "colId": "a87ae599-c81a-41e7-8de0-0ea747179773",
+            "containerId": "",
+            "name": "Delete User",
+            "url": "http://localhost:8080/kinalShop/v1/users",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-09T06:32:08.753Z",
+            "modified": "2024-03-14T06:26:20.721Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmY2YmQxNGI2OGEyODgwNmRkM2YiLCJpYXQiOjE3MTAzOTc1NTMsImV4cCI6MTcxMDQwMTE1M30.jIcZ4_Bjz3DTYdZgSSJhC4ISEuzkDO_pS2hwZj312TE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"response\": \"si\"\n}",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "45282d55-5dd0-48a3-98a6-7a0ec531546c",
+            "colId": "a87ae599-c81a-41e7-8de0-0ea747179773",
+            "containerId": "",
+            "name": "GetUserById",
+            "url": "http://localhost:8080/kinalShop/v1/users/65ebff6bd14b68a28806dd3f",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-09T06:32:25.544Z",
+            "modified": "2024-03-09T06:33:03.576Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

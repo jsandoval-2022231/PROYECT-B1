@@ -1,0 +1,111 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "bill KS",
+    "dateExported": "2024-03-14T08:25:37.588Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fa7b1153-2243-4d89-aede-14eb1526c830",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "GET BILLS",
+            "url": "http://localhost:8080/kinalShop/v1/bills",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-10T20:40:14.923Z",
+            "modified": "2024-03-10T20:40:38.695Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "95dc7f6e-71c4-479f-9aff-05c4b2af43fa",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "GetBillById",
+            "url": "http://localhost:8080/kinalShop/v1/bills/65ebff6bd14b68a28806dd3f",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-11T17:43:48.427Z",
+            "modified": "2024-03-12T02:28:30.009Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "1900b944-d501-42d0-a2a9-93bde2f05a3b",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "Create Bill",
+            "url": "http://localhost:8080/kinalShop/v1/bills",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-12T02:35:55.716Z",
+            "modified": "2024-03-14T08:16:12.344Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkZmE4ZDE0OWJlODQwMjFmM2JkOTkiLCJpYXQiOjE3MTA0MDQxMTksImV4cCI6MTcxMDQwNzcxOX0.klglfAtrpkhqr0aB8OxYd3wYzfKlRY_czhkaCHUhgtM"
+                }
+            ],
+            "params": [],
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "d3362a5e-a6a6-40e5-9aa8-70e35feb8db9",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "PayBill",
+            "url": "http://localhost:8080/kinalShop/v1/bills/65f2b2a82745a539d56d2e17",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-12T03:00:10.997Z",
+            "modified": "2024-03-14T08:18:17.633Z",
+            "headers": [],
+            "params": [],
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "4b7de73a-19f3-4d18-8dec-82cd61cc8d4a",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "Create Bill Stock",
+            "url": "http://localhost:8080/kinalShop/v1/bills",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-12T15:29:35.664Z",
+            "modified": "2024-03-12T16:54:24.140Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVjOTNmMjRhMjMyNzRjNWQ1ZTQ5ODIiLCJpYXQiOjE3MTAyNjIzOTEsImV4cCI6MTcxMDI2NTk5MX0.yM16WKfXXSQZ0TJEoWOX_ey-mhBseXXaWqlA-ZzG6HE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "af68d5ca-f0c0-459a-8ea8-cb77d5878603",
+            "colId": "310189d7-c6ce-48cb-93a4-b029a6184266",
+            "containerId": "",
+            "name": "GetMyBills",
+            "url": "http://localhost:8080/kinalShop/v1/bills/mybills",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-14T02:32:05.630Z",
+            "modified": "2024-03-14T08:17:57.212Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkZmE4ZDE0OWJlODQwMjFmM2JkOTkiLCJpYXQiOjE3MTA0MDQxMTksImV4cCI6MTcxMDQwNzcxOX0.klglfAtrpkhqr0aB8OxYd3wYzfKlRY_czhkaCHUhgtM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

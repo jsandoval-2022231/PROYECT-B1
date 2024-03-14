@@ -1,0 +1,101 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CATEGORY  KS",
+    "dateExported": "2024-03-14T08:26:33.902Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9dc94bed-5fd9-4797-b846-c97f25e072aa",
+            "colId": "3da23134-7ca0-4b88-a658-9bfad58059e3",
+            "containerId": "",
+            "name": "GET CATEGORY",
+            "url": "http://localhost:8080/kinalShop/v1/categories",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-10T00:41:04.659Z",
+            "modified": "2024-03-10T00:41:18.685Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5d4191cd-41f3-44dd-b0cb-4d6660074ed7",
+            "colId": "3da23134-7ca0-4b88-a658-9bfad58059e3",
+            "containerId": "",
+            "name": "CREATE CATEGORY",
+            "url": "http://localhost:8080/kinalShop/v1/categories",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-10T00:41:31.188Z",
+            "modified": "2024-03-14T08:04:32.033Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmY2YmQxNGI2OGEyODgwNmRkM2YiLCJpYXQiOjE3MTA0MDM0MjksImV4cCI6MTcxMDQwNzAyOX0.pko_dbqgICHKbdK3XWuPKC-5IZQiLHp4wmEmVowEMVE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"TEST 2\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "38f190de-a7b6-4471-b8e6-c16aa212acd6",
+            "colId": "3da23134-7ca0-4b88-a658-9bfad58059e3",
+            "containerId": "",
+            "name": "Get Category By ID",
+            "url": "http://localhost:8080/kinalShop/v1/categories/65ed00d81944b248383dd0d2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-10T00:43:21.875Z",
+            "modified": "2024-03-10T00:43:31.429Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "97cf4224-34ca-4034-9204-02eb61a6ffdd",
+            "colId": "3da23134-7ca0-4b88-a658-9bfad58059e3",
+            "containerId": "",
+            "name": "UpdateCategory",
+            "url": "http://localhost:8080/kinalShop/v1/categories/65ed00d81944b248383dd0d2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-10T00:48:45.479Z",
+            "modified": "2024-03-10T00:52:46.636Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"BeveragesChanged2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f327344-1d62-4875-a5ba-28812746640b",
+            "colId": "3da23134-7ca0-4b88-a658-9bfad58059e3",
+            "containerId": "",
+            "name": "Delete Category",
+            "url": "http://localhost:8080/kinalShop/v1/categories/65f2af80be44ede213b3ed58",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-10T00:53:06.705Z",
+            "modified": "2024-03-14T08:07:16.421Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmY2YmQxNGI2OGEyODgwNmRkM2YiLCJpYXQiOjE3MTA0MDM0MjksImV4cCI6MTcxMDQwNzAyOX0.pko_dbqgICHKbdK3XWuPKC-5IZQiLHp4wmEmVowEMVE"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        }
+    ]
+}

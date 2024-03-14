@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Product_for_Client",
+    "dateExported": "2024-03-14T08:25:59.615Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7c96f619-c670-47ea-99ee-28119c22d50e",
+            "colId": "0c5e8730-0307-4e5a-a5e3-b344643954eb",
+            "containerId": "",
+            "name": "Products_SoldOut",
+            "url": "http://localhost:8080/kinalShop/v1/products/soldOut",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-10T02:18:39.049Z",
+            "modified": "2024-03-10T02:29:16.866Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "da499354-783e-4e1e-b1b2-4180b748b679",
+            "colId": "0c5e8730-0307-4e5a-a5e3-b344643954eb",
+            "containerId": "",
+            "name": "GetMyBills",
+            "url": "http://localhost:8080/kinalShop/v1/bills/mybills",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-14T02:31:07.882Z",
+            "modified": "2024-03-14T07:49:56.128Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmZjY2QxNGI2OGEyODgwNmRkNDUiLCJpYXQiOjE3MTA0MDI1ODIsImV4cCI6MTcxMDQwNjE4Mn0.Gm7GhhZqrVfzBXFT3PvDehrGKxAl0f9hqUwTLuc2aIk"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5f2a2121-a043-4323-b177-ec34156e4c3a",
+            "colId": "0c5e8730-0307-4e5a-a5e3-b344643954eb",
+            "containerId": "",
+            "name": "Product By Name",
+            "url": "http://localhost:8080/kinalShop/v1/products/productBy/testProductchanged",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-14T05:14:33.224Z",
+            "modified": "2024-03-14T05:16:11.068Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ecb1b7b7-8165-4fad-b089-ff6501aefa9d",
+            "colId": "0c5e8730-0307-4e5a-a5e3-b344643954eb",
+            "containerId": "",
+            "name": "Get Product Seller ",
+            "url": "http://localhost:8080/kinalShop/v1/bills/seller",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-14T07:04:02.949Z",
+            "modified": "2024-03-14T07:04:21.917Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

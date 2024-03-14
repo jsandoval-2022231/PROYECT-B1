@@ -1,0 +1,119 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "PRODUCT KS",
+    "dateExported": "2024-03-14T08:26:04.961Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "91f0a8cc-429a-4528-9898-3dccf200d38d",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "Get Products",
+            "url": "http://localhost:8080/kinalShop/v1/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-10T01:27:42.779Z",
+            "modified": "2024-03-10T01:27:50.884Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cb4c974b-041a-433d-993b-3ebf51626a4a",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "GetProductById",
+            "url": "http://localhost:8080/kinalShop/v1/products/65ed0b691944b248383dd0db",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-10T01:28:55.154Z",
+            "modified": "2024-03-10T01:29:09.423Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "73f559f7-4851-4ac1-bf81-13b627dfd3bd",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "CreateProduct",
+            "url": "http://localhost:8080/kinalShop/v1/products",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-10T01:29:23.188Z",
+            "modified": "2024-03-14T08:11:08.709Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmY2YmQxNGI2OGEyODgwNmRkM2YiLCJpYXQiOjE3MTA0MDM0MjksImV4cCI6MTcxMDQwNzAyOX0.pko_dbqgICHKbdK3XWuPKC-5IZQiLHp4wmEmVowEMVE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test11\",\n  \"description\": \"description test10\",\n  \"price\": 150.50,\n  \"stock\": 1,\n  \"category\": \"65f2af80be44ede213b3ed58\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "ef7fbc79-1a00-4c75-9e08-ceaced130f42",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "Updated Product",
+            "url": "http://localhost:8080/kinalShop/v1/products/65ed0b691944b248383dd0db",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-10T01:50:09.521Z",
+            "modified": "2024-03-10T01:52:27.300Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"testProductchanged\",\n  \"description\": \"description changed\",\n  \"price\": 60.50,\n  \"stock\": 50,\n  \"status\": \"SOLD_OUT\",\n  \"category\": \"65ed0289d71c0f201a151550\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "78202588-5533-45f4-b6c0-e3d4f78e23c5",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "Delete Product",
+            "url": "http://localhost:8080/kinalShop/v1/products/65ed0b691944b248383dd0db",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-10T02:09:36.797Z",
+            "modified": "2024-03-10T02:11:05.220Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZmZjY2QxNGI2OGEyODgwNmRkNDUiLCJpYXQiOjE3MTAwMzY2MjksImV4cCI6MTcxMDA0MDIyOX0.y0ZJCFjC54X0TrFAu0YTF6HlRrbukrD74bxegOTp3g0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\": \"NOT_AVAILABLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c8f328b3-678d-4a2a-baf4-960d58b10515",
+            "colId": "9a595779-b313-445e-a651-1c47ef832163",
+            "containerId": "",
+            "name": "Delete Category",
+            "url": "http://localhost:8080/kinalShop/v1/categories/65f296500b6e56e699e607b1",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-14T06:13:51.733Z",
+            "modified": "2024-03-14T07:11:14.447Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
